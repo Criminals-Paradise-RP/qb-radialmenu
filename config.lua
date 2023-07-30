@@ -12,13 +12,6 @@ Config.MenuItems = {
         icon = 'user',
         items = {
             {
-                id = 'givenum',
-                title = 'Give Contact Details',
-                icon = 'address-book',
-                type = 'client',
-                event = 'qb-phone:client:GiveContactDetails',
-                shouldClose = true
-            }, {
                 id = 'getintrunk',
                 title = 'Get In Trunk',
                 icon = 'car',
@@ -26,18 +19,18 @@ Config.MenuItems = {
                 event = 'qb-trunk:client:GetIn',
                 shouldClose = true
             }, {
-                id = 'cornerselling',
-                title = 'Corner Selling',
-                icon = 'cannabis',
+                id = 'checkwarrant',
+                title = 'Check Warrants',
+                icon = 'question',
                 type = 'client',
-                event = 'qb-drugs:client:cornerselling',
+                event = 'checkwarrant',
                 shouldClose = true
             }, {
-                id = 'togglehotdogsell',
-                title = 'Hotdog Selling',
-                icon = 'hotdog',
+                id = 'flipvehicle',
+                title = 'Flip Vehicle',
+                icon = 'car-crash',
                 type = 'client',
-                event = 'qb-hotdogjob:client:ToggleSell',
+                event = 'jim-mechanic:flipvehicle',
                 shouldClose = true
             }, {
                 id = 'interactions',
@@ -539,33 +532,6 @@ Config.JobInteractions = {
             shouldClose = true
         }
     },
-    ["tow"] = {
-        {
-            id = 'togglenpc',
-            title = 'Toggle NPC',
-            icon = 'toggle-on',
-            type = 'client',
-            event = 'jobs:client:ToggleNpc',
-            shouldClose = true
-        }, {
-            id = 'towvehicle',
-            title = 'Tow vehicle',
-            icon = 'truck-pickup',
-            type = 'client',
-            event = 'qb-tow:client:TowVehicle',
-            shouldClose = true
-        }
-    },
-    ["mechanic"] = {
-        {
-            id = 'towvehicle',
-            title = 'Tow vehicle',
-            icon = 'truck-pickup',
-            type = 'client',
-            event = 'qb-tow:client:TowVehicle',
-            shouldClose = true
-        }
-    },
     ["police"] = {
         {
             id = 'emergencybutton',
@@ -582,11 +548,11 @@ Config.JobInteractions = {
             event = 'qb-tunerchip:client:TuneStatus',
             shouldClose = true
         }, {
-            id = 'resethouse',
-            title = 'Reset house lock',
-            icon = 'key',
+            id = 'insurance',
+            title = 'Check Insurance',
+            icon = 'bell',
             type = 'client',
-            event = 'qb-houses:client:ResetHouse',
+            event = 'm-Insurance:Client:CheckInsurance',
             shouldClose = true
         }, {
             id = 'takedriverlicense',
@@ -678,11 +644,126 @@ Config.JobInteractions = {
                     event = 'police:client:spawnLight',
                     shouldClose = false
                 }, {
-                    id = 'spikestrip',
-                    title = 'Spike Strips',
-                    icon = 'caret-up',
+                    id = 'deleteobject',
+                    title = 'Remove object',
+                    icon = 'trash',
                     type = 'client',
-                    event = 'police:client:SpawnSpikeStrip',
+                    event = 'police:client:deleteObject',
+                    shouldClose = false
+                }
+            }
+        }
+    },
+    ["sapr"] = {
+        {
+            id = 'emergencybutton',
+            title = 'Emergency button',
+            icon = 'bell',
+            type = 'client',
+            event = 'police:client:SendPoliceEmergencyAlert',
+            shouldClose = true
+        }, {
+            id = 'checkvehstatus',
+            title = 'Check Tune Status',
+            icon = 'circle-info',
+            type = 'client',
+            event = 'qb-tunerchip:client:TuneStatus',
+            shouldClose = true
+        }, {
+            id = 'insurance',
+            title = 'Check Insurance',
+            icon = 'bell',
+            type = 'client',
+            event = 'm-Insurance:Client:CheckInsurance',
+            shouldClose = true
+        }, {
+            id = 'takedriverlicense',
+            title = 'Revoke Drivers License',
+            icon = 'id-card',
+            type = 'client',
+            event = 'police:client:SeizeDriverLicense',
+            shouldClose = true
+        }, {
+            id = 'policeinteraction',
+            title = 'Police Actions',
+            icon = 'list-check',
+            items = {
+                {
+                    id = 'statuscheck',
+                    title = 'Check Health Status',
+                    icon = 'heart-pulse',
+                    type = 'client',
+                    event = 'hospital:client:CheckStatus',
+                    shouldClose = true
+                }, {
+                    id = 'checkstatus',
+                    title = 'Check status',
+                    icon = 'question',
+                    type = 'client',
+                    event = 'police:client:CheckStatus',
+                    shouldClose = true
+                }, {
+                    id = 'escort',
+                    title = 'Escort',
+                    icon = 'user-group',
+                    type = 'client',
+                    event = 'police:client:EscortPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'searchplayer',
+                    title = 'Search',
+                    icon = 'magnifying-glass',
+                    type = 'client',
+                    event = 'police:client:SearchPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'jailplayer',
+                    title = 'Jail',
+                    icon = 'user-lock',
+                    type = 'client',
+                    event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }
+            }
+        }, {
+            id = 'policeobjects',
+            title = 'Objects',
+            icon = 'road',
+            items = {
+                {
+                    id = 'spawnpion',
+                    title = 'Cone',
+                    icon = 'triangle-exclamation',
+                    type = 'client',
+                    event = 'police:client:spawnCone',
+                    shouldClose = false
+                }, {
+                    id = 'spawnhek',
+                    title = 'Gate',
+                    icon = 'torii-gate',
+                    type = 'client',
+                    event = 'police:client:spawnBarrier',
+                    shouldClose = false
+                }, {
+                    id = 'spawnschotten',
+                    title = 'Speed Limit Sign',
+                    icon = 'sign-hanging',
+                    type = 'client',
+                    event = 'police:client:spawnRoadSign',
+                    shouldClose = false
+                }, {
+                    id = 'spawntent',
+                    title = 'Tent',
+                    icon = 'campground',
+                    type = 'client',
+                    event = 'police:client:spawnTent',
+                    shouldClose = false
+                }, {
+                    id = 'spawnverlichting',
+                    title = 'Lighting',
+                    icon = 'lightbulb',
+                    type = 'client',
+                    event = 'police:client:spawnLight',
                     shouldClose = false
                 }, {
                     id = 'deleteobject',
@@ -695,14 +776,248 @@ Config.JobInteractions = {
             }
         }
     },
-    ["hotdog"] = {
+    ["sasp"] = {
         {
-            id = 'togglesell',
-            title = 'Toggle sell',
-            icon = 'hotdog',
+            id = 'emergencybutton',
+            title = 'Emergency button',
+            icon = 'bell',
             type = 'client',
-            event = 'qb-hotdogjob:client:ToggleSell',
+            event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
+        }, {
+            id = 'checkvehstatus',
+            title = 'Check Tune Status',
+            icon = 'circle-info',
+            type = 'client',
+            event = 'qb-tunerchip:client:TuneStatus',
+            shouldClose = true
+        }, {
+            id = 'insurance',
+            title = 'Check Insurance',
+            icon = 'bell',
+            type = 'client',
+            event = 'm-Insurance:Client:CheckInsurance',
+            shouldClose = true
+        }, {
+            id = 'takedriverlicense',
+            title = 'Revoke Drivers License',
+            icon = 'id-card',
+            type = 'client',
+            event = 'police:client:SeizeDriverLicense',
+            shouldClose = true
+        }, {
+            id = 'policeinteraction',
+            title = 'Police Actions',
+            icon = 'list-check',
+            items = {
+                {
+                    id = 'statuscheck',
+                    title = 'Check Health Status',
+                    icon = 'heart-pulse',
+                    type = 'client',
+                    event = 'hospital:client:CheckStatus',
+                    shouldClose = true
+                }, {
+                    id = 'checkstatus',
+                    title = 'Check status',
+                    icon = 'question',
+                    type = 'client',
+                    event = 'police:client:CheckStatus',
+                    shouldClose = true
+                }, {
+                    id = 'escort',
+                    title = 'Escort',
+                    icon = 'user-group',
+                    type = 'client',
+                    event = 'police:client:EscortPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'searchplayer',
+                    title = 'Search',
+                    icon = 'magnifying-glass',
+                    type = 'client',
+                    event = 'police:client:SearchPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'jailplayer',
+                    title = 'Jail',
+                    icon = 'user-lock',
+                    type = 'client',
+                    event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }
+            }
+        }, {
+            id = 'policeobjects',
+            title = 'Objects',
+            icon = 'road',
+            items = {
+                {
+                    id = 'spawnpion',
+                    title = 'Cone',
+                    icon = 'triangle-exclamation',
+                    type = 'client',
+                    event = 'police:client:spawnCone',
+                    shouldClose = false
+                }, {
+                    id = 'spawnhek',
+                    title = 'Gate',
+                    icon = 'torii-gate',
+                    type = 'client',
+                    event = 'police:client:spawnBarrier',
+                    shouldClose = false
+                }, {
+                    id = 'spawnschotten',
+                    title = 'Speed Limit Sign',
+                    icon = 'sign-hanging',
+                    type = 'client',
+                    event = 'police:client:spawnRoadSign',
+                    shouldClose = false
+                }, {
+                    id = 'spawntent',
+                    title = 'Tent',
+                    icon = 'campground',
+                    type = 'client',
+                    event = 'police:client:spawnTent',
+                    shouldClose = false
+                }, {
+                    id = 'spawnverlichting',
+                    title = 'Lighting',
+                    icon = 'lightbulb',
+                    type = 'client',
+                    event = 'police:client:spawnLight',
+                    shouldClose = false
+                }, {
+                    id = 'deleteobject',
+                    title = 'Remove object',
+                    icon = 'trash',
+                    type = 'client',
+                    event = 'police:client:deleteObject',
+                    shouldClose = false
+                }
+            }
+        }
+    },
+    ["bcso"] = {
+        {
+            id = 'emergencybutton',
+            title = 'Emergency button',
+            icon = 'bell',
+            type = 'client',
+            event = 'police:client:SendPoliceEmergencyAlert',
+            shouldClose = true
+        }, {
+            id = 'checkvehstatus',
+            title = 'Check Tune Status',
+            icon = 'circle-info',
+            type = 'client',
+            event = 'qb-tunerchip:client:TuneStatus',
+            shouldClose = true
+        }, {
+            id = 'insurance',
+            title = 'Check Insurance',
+            icon = 'bell',
+            type = 'client',
+            event = 'm-Insurance:Client:CheckInsurance',
+            shouldClose = true
+        }, {
+            id = 'takedriverlicense',
+            title = 'Revoke Drivers License',
+            icon = 'id-card',
+            type = 'client',
+            event = 'police:client:SeizeDriverLicense',
+            shouldClose = true
+        }, {
+            id = 'policeinteraction',
+            title = 'Police Actions',
+            icon = 'list-check',
+            items = {
+                {
+                    id = 'statuscheck',
+                    title = 'Check Health Status',
+                    icon = 'heart-pulse',
+                    type = 'client',
+                    event = 'hospital:client:CheckStatus',
+                    shouldClose = true
+                }, {
+                    id = 'checkstatus',
+                    title = 'Check status',
+                    icon = 'question',
+                    type = 'client',
+                    event = 'police:client:CheckStatus',
+                    shouldClose = true
+                }, {
+                    id = 'escort',
+                    title = 'Escort',
+                    icon = 'user-group',
+                    type = 'client',
+                    event = 'police:client:EscortPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'searchplayer',
+                    title = 'Search',
+                    icon = 'magnifying-glass',
+                    type = 'client',
+                    event = 'police:client:SearchPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'jailplayer',
+                    title = 'Jail',
+                    icon = 'user-lock',
+                    type = 'client',
+                    event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }
+            }
+        }, {
+            id = 'policeobjects',
+            title = 'Objects',
+            icon = 'road',
+            items = {
+                {
+                    id = 'spawnpion',
+                    title = 'Cone',
+                    icon = 'triangle-exclamation',
+                    type = 'client',
+                    event = 'police:client:spawnCone',
+                    shouldClose = false
+                }, {
+                    id = 'spawnhek',
+                    title = 'Gate',
+                    icon = 'torii-gate',
+                    type = 'client',
+                    event = 'police:client:spawnBarrier',
+                    shouldClose = false
+                }, {
+                    id = 'spawnschotten',
+                    title = 'Speed Limit Sign',
+                    icon = 'sign-hanging',
+                    type = 'client',
+                    event = 'police:client:spawnRoadSign',
+                    shouldClose = false
+                }, {
+                    id = 'spawntent',
+                    title = 'Tent',
+                    icon = 'campground',
+                    type = 'client',
+                    event = 'police:client:spawnTent',
+                    shouldClose = false
+                }, {
+                    id = 'spawnverlichting',
+                    title = 'Lighting',
+                    icon = 'lightbulb',
+                    type = 'client',
+                    event = 'police:client:spawnLight',
+                    shouldClose = false
+                }, {
+                    id = 'deleteobject',
+                    title = 'Remove object',
+                    icon = 'trash',
+                    type = 'client',
+                    event = 'police:client:deleteObject',
+                    shouldClose = false
+                }
+            }
         }
     }
 }
