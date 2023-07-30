@@ -1,6 +1,6 @@
 Config = {}
 Config.Keybind = 'F1' -- FiveM Keyboard, this is registered keymapping, so needs changed in keybindings if player already has this mapped.
-Config.Toggle = false -- use toggle mode. False requires hold of key
+Config.Toggle = true -- use toggle mode. False requires hold of key
 Config.UseWhilstWalking = false -- use whilst walking
 Config.EnableExtraMenu = true
 Config.Fliptime = 15000
@@ -28,7 +28,7 @@ Config.MenuItems = {
             }, {
                 id = 'flipvehicle',
                 title = 'Flip Vehicle',
-                icon = 'car-crash',
+                icon = 'car-burst',
                 type = 'client',
                 event = 'jim-mechanic:flipvehicle',
                 shouldClose = true
