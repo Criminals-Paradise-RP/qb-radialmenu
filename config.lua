@@ -555,11 +555,11 @@ Config.JobInteractions = {
             event = 'm-Insurance:Client:CheckInsurance',
             shouldClose = true
         }, {
-            id = 'takedriverlicense',
-            title = 'Revoke Drivers License',
-            icon = 'id-card',
+            id = 'trafficstop',
+            title = 'Traffic Stop',
+            icon = 'circle-info',
             type = 'client',
-            event = 'police:client:SeizeDriverLicense',
+            event = 'ps-mdt:client:trafficStop',
             shouldClose = true
         }, {
             id = 'policeinteraction',
@@ -677,11 +677,11 @@ Config.JobInteractions = {
             event = 'm-Insurance:Client:CheckInsurance',
             shouldClose = true
         }, {
-            id = 'takedriverlicense',
-            title = 'Revoke Drivers License',
-            icon = 'id-card',
+            id = 'trafficstop',
+            title = 'Traffic Stop',
+            icon = 'circle-info',
             type = 'client',
-            event = 'police:client:SeizeDriverLicense',
+            event = 'ps-mdt:client:trafficStop',
             shouldClose = true
         }, {
             id = 'policeinteraction',
@@ -799,11 +799,11 @@ Config.JobInteractions = {
             event = 'm-Insurance:Client:CheckInsurance',
             shouldClose = true
         }, {
-            id = 'takedriverlicense',
-            title = 'Revoke Drivers License',
-            icon = 'id-card',
+            id = 'trafficstop',
+            title = 'Traffic Stop',
+            icon = 'circle-info',
             type = 'client',
-            event = 'police:client:SeizeDriverLicense',
+            event = 'ps-mdt:client:trafficStop',
             shouldClose = true
         }, {
             id = 'policeinteraction',
@@ -921,11 +921,11 @@ Config.JobInteractions = {
             event = 'm-Insurance:Client:CheckInsurance',
             shouldClose = true
         }, {
-            id = 'takedriverlicense',
-            title = 'Revoke Drivers License',
-            icon = 'id-card',
+            id = 'trafficstop',
+            title = 'Traffic Stop',
+            icon = 'circle-info',
             type = 'client',
-            event = 'police:client:SeizeDriverLicense',
+            event = 'ps-mdt:client:trafficStop',
             shouldClose = true
         }, {
             id = 'policeinteraction',
