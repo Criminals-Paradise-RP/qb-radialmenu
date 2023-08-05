@@ -12,82 +12,54 @@ Config.MenuItems = {
         icon = 'user',
         items = {
             {
-                id = 'getintrunk',
-                title = 'Get In Trunk',
-                icon = 'car',
+                id = 'handcuff',
+                title = 'Cuff',
+                icon = 'user-lock',
                 type = 'client',
-                event = 'qb-trunk:client:GetIn',
+                event = 'police:client:CuffPlayerSoft',
                 shouldClose = true
             }, {
-                id = 'checkwarrant',
-                title = 'Check Warrants',
-                icon = 'question',
+                id = 'playerinvehicle',
+                title = 'Put In Vehicle',
+                icon = 'car-side',
                 type = 'client',
-                event = 'checkwarrant',
+                event = 'police:client:PutPlayerInVehicle',
                 shouldClose = true
             }, {
-                id = 'flipvehicle',
-                title = 'Flip Vehicle',
-                icon = 'car-burst',
+                id = 'playeroutvehicle',
+                title = 'Take Out Of Vehicle',
+                icon = 'car-side',
                 type = 'client',
-                event = 'jim-mechanic:flipvehicle',
+                event = 'police:client:SetPlayerOutVehicle',
                 shouldClose = true
             }, {
-                id = 'interactions',
-                title = 'Interaction',
-                icon = 'triangle-exclamation',
-                items = {
-                    {
-                        id = 'handcuff',
-                        title = 'Cuff',
-                        icon = 'user-lock',
-                        type = 'client',
-                        event = 'police:client:CuffPlayerSoft',
-                        shouldClose = true
-                    }, {
-                        id = 'playerinvehicle',
-                        title = 'Put In Vehicle',
-                        icon = 'car-side',
-                        type = 'client',
-                        event = 'police:client:PutPlayerInVehicle',
-                        shouldClose = true
-                    }, {
-                        id = 'playeroutvehicle',
-                        title = 'Take Out Of Vehicle',
-                        icon = 'car-side',
-                        type = 'client',
-                        event = 'police:client:SetPlayerOutVehicle',
-                        shouldClose = true
-                    }, {
-                        id = 'stealplayer',
-                        title = 'Rob',
-                        icon = 'mask',
-                        type = 'client',
-                        event = 'police:client:RobPlayer',
-                        shouldClose = true
-                    }, {
-                        id = 'escort',
-                        title = 'Kidnap',
-                        icon = 'user-group',
-                        type = 'client',
-                        event = 'police:client:KidnapPlayer',
-                        shouldClose = true
-                    }, {
-                        id = 'escort2',
-                        title = 'Escort',
-                        icon = 'user-group',
-                        type = 'client',
-                        event = 'police:client:EscortPlayer',
-                        shouldClose = true
-                    }, {
-                        id = 'escort554',
-                        title = 'Hostage',
-                        icon = 'child',
-                        type = 'client',
-                        event = 'A5:Client:TakeHostage',
-                        shouldClose = true
-                    }
-                }
+                id = 'stealplayer',
+                title = 'Rob',
+                icon = 'mask',
+                type = 'client',
+                event = 'police:client:RobPlayer',
+                shouldClose = true
+            }, {
+                id = 'escort',
+                title = 'Kidnap',
+                icon = 'user-group',
+                type = 'client',
+                event = 'police:client:KidnapPlayer',
+                shouldClose = true
+            }, {
+                id = 'escort2',
+                title = 'Escort',
+                icon = 'user-group',
+                type = 'client',
+                event = 'police:client:EscortPlayer',
+                shouldClose = true
+            }, {
+                id = 'escort554',
+                title = 'Hostage',
+                icon = 'child',
+                type = 'client',
+                event = 'A5:Client:TakeHostage',
+                shouldClose = true
             }
         }
     },
@@ -97,69 +69,6 @@ Config.MenuItems = {
         icon = 'rectangle-list',
         items = {
             {
-                id = 'house',
-                title = 'House Interaction',
-                icon = 'house',
-                items = {
-                    {
-                        id = 'givehousekey',
-                        title = 'Give House Keys',
-                        icon = 'key',
-                        type = 'client',
-                        event = 'qb-houses:client:giveHouseKey',
-                        shouldClose = true
-                    }, {
-                        id = 'removehousekey',
-                        title = 'Remove House Keys',
-                        icon = 'key',
-                        type = 'client',
-                        event = 'qb-houses:client:removeHouseKey',
-                        shouldClose = true
-                    }, {
-                        id = 'togglelock',
-                        title = 'Toggle Doorlock',
-                        icon = 'door-closed',
-                        type = 'client',
-                        event = 'qb-houses:client:toggleDoorlock',
-                        shouldClose = true
-                    }, {
-                        id = 'decoratehouse',
-                        title = 'Decorate House',
-                        icon = 'box',
-                        type = 'client',
-                        event = 'qb-houses:client:decorate',
-                        shouldClose = true
-                    }, {
-                        id = 'houseLocations',
-                        title = 'Interaction Locations',
-                        icon = 'house',
-                        items = {
-                            {
-                                id = 'setstash',
-                                title = 'Set Stash',
-                                icon = 'box-open',
-                                type = 'client',
-                                event = 'qb-houses:client:setLocation',
-                                shouldClose = true
-                            }, {
-                                id = 'setoutift',
-                                title = 'Set Wardrobe',
-                                icon = 'shirt',
-                                type = 'client',
-                                event = 'qb-houses:client:setLocation',
-                                shouldClose = true
-                            }, {
-                                id = 'setlogout',
-                                title = 'Set Logout',
-                                icon = 'door-open',
-                                type = 'client',
-                                event = 'qb-houses:client:setLocation',
-                                shouldClose = true
-                            }
-                        }
-                    }
-                }
-            }, {
                 id = 'clothesmenu',
                 title = 'Clothing',
                 icon = 'shirt',
@@ -240,11 +149,11 @@ Config.MenuItems = {
                                 event = 'qb-radialmenu:ToggleProps',
                                 shouldClose = true
                             }, {
-                                id = 'Mask',
+                                id = 'Mask', -- lucid-masks
                                 title = 'Mask',
                                 icon = 'masks-theater',
                                 type = 'client',
-                                event = 'qb-radialmenu:ToggleClothing',
+                                event = 'lucid-masks:client:ToggleMask',
                                 shouldClose = true
                             }, {
                                 id = 'Vest',
@@ -285,7 +194,35 @@ Config.MenuItems = {
                         }
                     }
                 }
-            }
+            }, {
+                id = 'flipvehicle',
+                title = 'Flip Vehicle',
+                icon = 'car-burst',
+                type = 'client',
+                event = 'jim-mechanic:flipvehicle',
+                shouldClose = true
+            }, {
+                id = 'checkwarrant',
+                title = 'Check Warrants',
+                icon = 'question',
+                type = 'client',
+                event = 'checkwarrant',
+                shouldClose = true
+            }, {
+                id = 'getintrunk',
+                title = 'Get In Trunk',
+                icon = 'car',
+                type = 'client',
+                event = 'qb-trunk:client:GetIn',
+                shouldClose = true
+            }, {
+                id = 'emotes',
+                title = 'Emotes',
+                icon = 'face-meh-blank',
+                type = 'client',
+                event = 'rp:RecieveMenu',
+                shouldClose = true,
+            },
         }
     },
 }
@@ -448,6 +385,15 @@ Config.VehicleSeats = {
     items = {}
 }
 
+Config.VehicleOptions = {
+    id = 'openmenu',
+    title = 'Control Menu',
+    icon = 'car',
+    type = 'client',
+    event = 'vehcontrol:openExternal',
+    shouldClose = true
+}
+
 Config.JobInteractions = {
     ["ambulance"] = {
         {
@@ -541,18 +487,11 @@ Config.JobInteractions = {
             event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
         }, {
-            id = 'checkvehstatus',
-            title = 'Check Tune Status',
-            icon = 'circle-info',
+            id = 'escort',
+            title = 'Escort',
+            icon = 'user-group',
             type = 'client',
-            event = 'qb-tunerchip:client:TuneStatus',
-            shouldClose = true
-        }, {
-            id = 'insurance',
-            title = 'Check Insurance',
-            icon = 'bell',
-            type = 'client',
-            event = 'm-Insurance:Client:CheckInsurance',
+            event = 'police:client:EscortPlayer',
             shouldClose = true
         }, {
             id = 'trafficstop',
@@ -567,25 +506,11 @@ Config.JobInteractions = {
             icon = 'list-check',
             items = {
                 {
-                    id = 'statuscheck',
-                    title = 'Check Health Status',
-                    icon = 'heart-pulse',
-                    type = 'client',
-                    event = 'hospital:client:CheckStatus',
-                    shouldClose = true
-                }, {
                     id = 'checkstatus',
                     title = 'Check status',
                     icon = 'question',
                     type = 'client',
                     event = 'police:client:CheckStatus',
-                    shouldClose = true
-                }, {
-                    id = 'escort',
-                    title = 'Escort',
-                    icon = 'user-group',
-                    type = 'client',
-                    event = 'police:client:EscortPlayer',
                     shouldClose = true
                 }, {
                     id = 'searchplayer',
@@ -595,11 +520,25 @@ Config.JobInteractions = {
                     event = 'police:client:SearchPlayer',
                     shouldClose = true
                 }, {
+                    id = 'insurance',
+                    title = 'Check Insurance',
+                    icon = 'bell',
+                    type = 'client',
+                    event = 'm-Insurance:Client:CheckInsurance',
+                    shouldClose = true
+                }, {
                     id = 'jailplayer',
                     title = 'Jail',
                     icon = 'user-lock',
                     type = 'client',
                     event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'unlock',
+                    title = 'Unlock Veh.',
+                    icon = 'key',
+                    type = 'client',
+                    event = 'vehiclekeys:client:PoliceUnlock',
                     shouldClose = true
                 }
             }
@@ -663,18 +602,11 @@ Config.JobInteractions = {
             event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
         }, {
-            id = 'checkvehstatus',
-            title = 'Check Tune Status',
-            icon = 'circle-info',
+            id = 'escort',
+            title = 'Escort',
+            icon = 'user-group',
             type = 'client',
-            event = 'qb-tunerchip:client:TuneStatus',
-            shouldClose = true
-        }, {
-            id = 'insurance',
-            title = 'Check Insurance',
-            icon = 'bell',
-            type = 'client',
-            event = 'm-Insurance:Client:CheckInsurance',
+            event = 'police:client:EscortPlayer',
             shouldClose = true
         }, {
             id = 'trafficstop',
@@ -689,25 +621,11 @@ Config.JobInteractions = {
             icon = 'list-check',
             items = {
                 {
-                    id = 'statuscheck',
-                    title = 'Check Health Status',
-                    icon = 'heart-pulse',
-                    type = 'client',
-                    event = 'hospital:client:CheckStatus',
-                    shouldClose = true
-                }, {
                     id = 'checkstatus',
                     title = 'Check status',
                     icon = 'question',
                     type = 'client',
                     event = 'police:client:CheckStatus',
-                    shouldClose = true
-                }, {
-                    id = 'escort',
-                    title = 'Escort',
-                    icon = 'user-group',
-                    type = 'client',
-                    event = 'police:client:EscortPlayer',
                     shouldClose = true
                 }, {
                     id = 'searchplayer',
@@ -717,11 +635,25 @@ Config.JobInteractions = {
                     event = 'police:client:SearchPlayer',
                     shouldClose = true
                 }, {
+                    id = 'insurance',
+                    title = 'Check Insurance',
+                    icon = 'bell',
+                    type = 'client',
+                    event = 'm-Insurance:Client:CheckInsurance',
+                    shouldClose = true
+                }, {
                     id = 'jailplayer',
                     title = 'Jail',
                     icon = 'user-lock',
                     type = 'client',
                     event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'unlock',
+                    title = 'Unlock Veh.',
+                    icon = 'key',
+                    type = 'client',
+                    event = 'vehiclekeys:client:PoliceUnlock',
                     shouldClose = true
                 }
             }
@@ -785,18 +717,11 @@ Config.JobInteractions = {
             event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
         }, {
-            id = 'checkvehstatus',
-            title = 'Check Tune Status',
-            icon = 'circle-info',
+            id = 'escort',
+            title = 'Escort',
+            icon = 'user-group',
             type = 'client',
-            event = 'qb-tunerchip:client:TuneStatus',
-            shouldClose = true
-        }, {
-            id = 'insurance',
-            title = 'Check Insurance',
-            icon = 'bell',
-            type = 'client',
-            event = 'm-Insurance:Client:CheckInsurance',
+            event = 'police:client:EscortPlayer',
             shouldClose = true
         }, {
             id = 'trafficstop',
@@ -811,25 +736,11 @@ Config.JobInteractions = {
             icon = 'list-check',
             items = {
                 {
-                    id = 'statuscheck',
-                    title = 'Check Health Status',
-                    icon = 'heart-pulse',
-                    type = 'client',
-                    event = 'hospital:client:CheckStatus',
-                    shouldClose = true
-                }, {
                     id = 'checkstatus',
                     title = 'Check status',
                     icon = 'question',
                     type = 'client',
                     event = 'police:client:CheckStatus',
-                    shouldClose = true
-                }, {
-                    id = 'escort',
-                    title = 'Escort',
-                    icon = 'user-group',
-                    type = 'client',
-                    event = 'police:client:EscortPlayer',
                     shouldClose = true
                 }, {
                     id = 'searchplayer',
@@ -839,11 +750,25 @@ Config.JobInteractions = {
                     event = 'police:client:SearchPlayer',
                     shouldClose = true
                 }, {
+                    id = 'insurance',
+                    title = 'Check Insurance',
+                    icon = 'bell',
+                    type = 'client',
+                    event = 'm-Insurance:Client:CheckInsurance',
+                    shouldClose = true
+                }, {
                     id = 'jailplayer',
                     title = 'Jail',
                     icon = 'user-lock',
                     type = 'client',
                     event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'unlock',
+                    title = 'Unlock Veh.',
+                    icon = 'key',
+                    type = 'client',
+                    event = 'vehiclekeys:client:PoliceUnlock',
                     shouldClose = true
                 }
             }
@@ -907,18 +832,11 @@ Config.JobInteractions = {
             event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
         }, {
-            id = 'checkvehstatus',
-            title = 'Check Tune Status',
-            icon = 'circle-info',
+            id = 'escort',
+            title = 'Escort',
+            icon = 'user-group',
             type = 'client',
-            event = 'qb-tunerchip:client:TuneStatus',
-            shouldClose = true
-        }, {
-            id = 'insurance',
-            title = 'Check Insurance',
-            icon = 'bell',
-            type = 'client',
-            event = 'm-Insurance:Client:CheckInsurance',
+            event = 'police:client:EscortPlayer',
             shouldClose = true
         }, {
             id = 'trafficstop',
@@ -933,25 +851,11 @@ Config.JobInteractions = {
             icon = 'list-check',
             items = {
                 {
-                    id = 'statuscheck',
-                    title = 'Check Health Status',
-                    icon = 'heart-pulse',
-                    type = 'client',
-                    event = 'hospital:client:CheckStatus',
-                    shouldClose = true
-                }, {
                     id = 'checkstatus',
                     title = 'Check status',
                     icon = 'question',
                     type = 'client',
                     event = 'police:client:CheckStatus',
-                    shouldClose = true
-                }, {
-                    id = 'escort',
-                    title = 'Escort',
-                    icon = 'user-group',
-                    type = 'client',
-                    event = 'police:client:EscortPlayer',
                     shouldClose = true
                 }, {
                     id = 'searchplayer',
@@ -961,11 +865,25 @@ Config.JobInteractions = {
                     event = 'police:client:SearchPlayer',
                     shouldClose = true
                 }, {
+                    id = 'insurance',
+                    title = 'Check Insurance',
+                    icon = 'bell',
+                    type = 'client',
+                    event = 'm-Insurance:Client:CheckInsurance',
+                    shouldClose = true
+                }, {
                     id = 'jailplayer',
                     title = 'Jail',
                     icon = 'user-lock',
                     type = 'client',
                     event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'unlock',
+                    title = 'Unlock Veh.',
+                    icon = 'key',
+                    type = 'client',
+                    event = 'vehiclekeys:client:PoliceUnlock',
                     shouldClose = true
                 }
             }
@@ -1141,14 +1059,14 @@ Config.Commands = {
         Desc = "Take your bracelet off/on",
         Button = 13,
         Name = "Bracelet"
-    },
-    ["mask"] = {
-        Func = function() ToggleClothing("Mask") end,
-        Sprite = "mask",
-        Desc = "Take your mask off/on",
-        Button = 6,
-        Name = "Mask"
     }
+    -- ["mask"] = { -- lucis-masks (removed comma above too)
+    --     Func = function() ToggleClothing("Mask") end,
+    --     Sprite = "mask",
+    --     Desc = "Take your mask off/on",
+    --     Button = 6,
+    --     Name = "Mask"
+    -- }
 }
 
 local bags = {[40] = true, [41] = true, [44] = true, [45] = true}
