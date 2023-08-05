@@ -91,6 +91,7 @@ local function SetupVehicleMenu()
     local Vehicle = GetVehiclePedIsIn(ped) ~= 0 and GetVehiclePedIsIn(ped) or getNearestVeh()
     if Vehicle ~= 0 then
         VehicleMenu.items[#VehicleMenu.items+1] = Config.VehicleDoors
+        VehicleMenu.items[#VehicleMenu.items+1] = Config.VehicleOptions
         if Config.EnableExtraMenu then VehicleMenu.items[#VehicleMenu.items+1] = Config.VehicleExtras end
 
         if not IsVehicleOnAllWheels(Vehicle) then
