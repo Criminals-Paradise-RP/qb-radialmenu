@@ -216,6 +216,13 @@ Config.MenuItems = {
                 event = 'qb-trunk:client:GetIn',
                 shouldClose = true
             }, {
+                id = 'cornerselling',
+                title = 'Corner Selling',
+                icon = 'cannabis',
+                type = 'client',
+                event = 'md-drugs:client:cornerselling',
+                shouldClose = true
+            }, {
                 id = 'emotes',
                 title = 'Emotes',
                 icon = 'face-meh-blank',
