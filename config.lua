@@ -429,7 +429,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'ps-dispatch:client:emsdown',
             shouldClose = true
         }, {
             id = 'escort',
@@ -491,7 +491,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'ps-dispatch:client:officerbackup',
             shouldClose = true
         }, {
             id = 'escort',
@@ -606,7 +606,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'ps-dispatch:client:officerbackup',
             shouldClose = true
         }, {
             id = 'escort',
@@ -721,7 +721,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'ps-dispatch:client:officerbackup',
             shouldClose = true
         }, {
             id = 'escort',
@@ -836,7 +836,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'ps-dispatch:client:officerbackup',
             shouldClose = true
         }, {
             id = 'escort',
